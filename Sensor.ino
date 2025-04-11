@@ -25,7 +25,7 @@ const float Vc = 3.3;
 const float RL = 10.0;
 const float R0 = 10.0;
 
-const int CO_ALARM_THRESHOLD = 200;
+const int CO_ALARM_THRESHOLD = 15;
 
 bool blinking = false;
 bool alertState = false;
