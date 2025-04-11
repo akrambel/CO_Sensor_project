@@ -1,5 +1,5 @@
 #define BLYNK_TEMPLATE_ID "TMPL2ihrjZxyl"
-#define BLYNK_TEMPLATE_NAME "Sensor"
+#define BLYNK_TEMPLATE_NAME "Smart CO Sense"
 #define BLYNK_AUTH_TOKEN "TypYiwEMv85BDQq2JM8FVWr0zgzPGRSf"
 
 #include <ESP8266WiFi.h>
@@ -126,7 +126,7 @@ void loop() {
     if (wifiConnected && Blynk.connected()) {
       Blynk.virtualWrite(V0, ppm);
       if (ppm >= CO_ALARM_THRESHOLD) {
-        Blynk.logEvent("high_gas", "CO Level > 200ppm");
+        Blynk.logEvent("co_alert", "🚨 WARNING: High Carbon Monoxide Detected!");
       }
     }
 
